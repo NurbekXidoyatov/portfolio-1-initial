@@ -1,16 +1,18 @@
 body{
   box-sizing:border-box;
+  position: relative;
+  z-index: 8;
 }
 .container{
-  width: 100%;
-  min-width: 1200px;
+  /* width: 100%; */
+  width: 1200px;
   padding-left: 50px;
   padding-right: 50px;
   margin-left: auto;
   margin-right: auto;
+  overflow-x: hidden;
 }
 .linear-gradient{
-  position: relative;
   background: linear-gradient(to bottom right,rgba(0, 0, 255, 0.849) 30%,#6a7c92 , crimson);
 }
 /* header */
@@ -20,7 +22,6 @@ body{
 /* header */
 /* header */
 .main-header{
-  top: 0;
   display: flex;
   justify-content: space-between;
   padding: 8px 60px;
@@ -37,6 +38,7 @@ body{
   display: flex;
   list-style: none;
   margin: 0;
+  position: relative;
 }
 .header-links > li{
   position: relative;
@@ -240,6 +242,7 @@ input[type="text"]{
   animation-direction: alternate;
   animation-timing-function: linear;
   z-index: 1;
+  overflow: hidden;
 }
 @keyframes img-mover {
   0%{
@@ -721,46 +724,164 @@ input[type="text"]{
 .header-logo{
   display: none;
 }
+.header-open-btn,
+.header-close-btn{
+  color:white;
+  display: none;
+}
+.logo-text{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+.plus-btn,
+.minus-btn{
+  display: none;
+  color: black;
+}
+.open-header-links{
+  animation-name:header-links-action;
+  animation-duration:0.5s;
+  animation-timing-function: both;
+  animation-fill-mode: both;
+  z-index: 10;
+  overflow: visible !important;
+}
+@keyframes header-links-action {
+  from{
+    max-height: 0;
+  }
+  to{
+    max-height: 282px;
+  }
+}
+.close-header-links{
+  animation-name:header-links-action2;
+  animation-duration:0.5s;
+  animation-timing-function: both;
+  animation-fill-mode: both;
+}
+@keyframes header-links-action2 {
+  from{
+    max-height: 282px;
+  }
+  to{
+    max-height: 0;
+  }
+}
 
-
-
 /*For mobile phone*/
 /*For mobile phone*/
 /*For mobile phone*/
 /*For mobile phone*/
 /*For mobile phone*/
 /*For mobile phone*/
-@media only screen and (max-width:720px){
+@media only screen and (max-width:412px){
+  .container{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .linear-gradient{
+    background:none;
+  }
+  .main-header{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    overflow-x: hidden;
+  }
   .logo-img-wrapper{
     display: none;
   }
   .header-links{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 57px;
+    background-color:white;
+    z-index: 2;
+    overflow: hidden;
+  }
+  .header-links li{
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.349);
+    position: relative;
+  }
+  .header-open-btn{
+    display: block;
+  }
+  .header-links li a{
+    color: #232323 !important;
+  }
+  .plus-btn{
+    display: block;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .minus-btn{
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+.home-hover-items{
+  position: relative !important;
+  width: 100%;
+  background-color:coral;
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+}
+  .icon{
     display: none;
   }
   .slide-img-rapper{
     display: none;
   }
   .header-logo{
-    padding: 0 20px;
+    display: block;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    align-items:center;
     background-color: blue;
+    padding: 0 10px;
   }
-  .close-btn{
-    width: 22px;
-    height: 3px;
-    background-color: white;
-  }
-  .logo-text{
-    color: #fff;
-    font-size: 18px;
-    font-weight: 700;
-  }
-  .section1-text{
-    width: 100%;
-    text-align: center;
+  .search-input{
+    display: none;
   }
 
+  .section1{
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0 ;
+    margin: 0;
+    background: linear-gradient(to bottom right, #6a7c92 , crimson,rgba(0, 0, 255, 0.849));
+    z-index: 1;
+
+  }
+  .section1-text,
+  .section1-title,
+  .section1-heading{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+  }
+  .section1-heading{
+    font-size: 32px;
+  }
+  .section1-text{
+    font-size: 18px;
+  }
+  .section1-title{
+    padding-top: 75px;
+  }
 }
