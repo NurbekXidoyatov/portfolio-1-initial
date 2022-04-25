@@ -20,14 +20,14 @@
     </div>
     <header class="main-header">
       <div class="logo-img-wrapper">
-        <img class="logo-img" src="../image/mainlogo.png" alt="logo" width="196" height="45">
+        <a href="../html/index.html"><img class="logo-img" src="../image/mainlogo.png" alt="logo" width="196" height="45"></a>
       </div>
-      <ul class="header-links">
-        <li class="home"><a class="main" href="#">Home</a>
+      <ul class="header-links ">
+        <li class="home necessary"><a class="main" href="#">Home</a>
           <div class="plus-btn"><i class="fa-solid fa-plus "></i></div>
           <div class="minus-btn"><i class="fa-solid fa-minus "></i></div>
           <ul class="home-hover-items">
-            <li class="home-hever-item"><a class="home-hover-link" href="#">Revolution slider new</a></li>
+            <li class="home-hever-item"><a class="home-hover-link" href="../html/revolutionSliderNew.html">Revolution slider new</a></li>
             <li class="home-hever-item"><a class="home-hover-link" href="#">Solution 1</a></li>
             <li class="home-hever-item"><a class="home-hover-link" href="#">Solution 2</a></li>
             <li class="home-hever-item"><a class="home-hover-link" href="#">Solution 3</a></li>
@@ -41,7 +41,7 @@
             <li class="home-hever-item"><a class="home-hover-link" href="#">Software 3</a></li>
           </ul>
         </li>
-        <li class="company"><a class="main" href="#">Company</a>
+        <li class="company necessary"><a class="main" href="#">Company</a>
           <div class="plus-btn"><i class="fa-solid fa-plus"></i></div>
           <div class="minus-btn"><i class="fa-solid fa-minus"></i></div>
           <ul class="company-hover-items">
@@ -59,7 +59,7 @@
             <li class="company-hever-item"><a class="company-hover-link" href="#">FAQ</a></li>
           </ul>
         </li>
-        <li class="services"><a class="main" href="#">Services</a>
+        <li class="services necessary"><a class="main" href="#">Services</a>
           <div class="plus-btn"><i class="fa-solid fa-plus"></i></div>
           <div class="minus-btn"><i class="fa-solid fa-minus"></i></div>
           <ul class="services-hover-items">
@@ -68,7 +68,7 @@
             <li class="services-hever-item"><a class="services-hover-link" href="#">Single Service</a></li>
           </ul>
         </li>
-        <li class="project"><a class="main" href="#">Project</a>
+        <li class="project necessary"><a class="main" href="#">Project</a>
           <div class="plus-btn"><i class="fa-solid fa-plus"></i></div>
           <div class="minus-btn"><i class="fa-solid fa-minus"></i></div>
           <ul class="project-hover-items">
@@ -80,7 +80,7 @@
             <li class="project-hever-item"><a class="project-hover-link" href="#">Portfolio-4 column full</a></li>
           </ul>
         </li>
-        <li class="blog"><a class="main" href="#">Blog</a>
+        <li class="blog necessary"><a class="main" href="#">Blog</a>
           <div class="plus-btn"><i class="fa-solid fa-plus"></i></div>
           <div class="minus-btn"><i class="fa-solid fa-minus"></i></div>
           <ul class="blog-hover-items">
@@ -89,7 +89,7 @@
             <li class="blog-hever-item"><a class="blog-hover-link" href="#">Blog-2 column</a></li>
           </ul>
         </li>
-        <li class="contact"><a class="main" class="contact" href="#">Contact</a></li>
+        <li class="contact necessary"><a class="main" class="contact" href="#">Contact</a></li>
         <li class="icon"><i class="fa-solid fa-magnifying-glass header-icon"></i>
           <i class="fa-solid fa-xmark header-search-close"></i>
         </li>
@@ -120,7 +120,7 @@
   <div class="container">
     <div class="section2">
       <div class="about-us-img">
-        <img src="../image/about-us-img.png" alt="about-us-img" width="460" height="500">
+        <img src="../image/about-us-img.png" class="for-mobile-img" alt="about-us-img" width="460" height="500">
       </div>
       <div class="section2-text">
         <h2 class="section2-heading">Exclusive Agency For technology Provide Solution</h2>
@@ -313,16 +313,17 @@
           <hr class="section2-hr">
           <p class="section2-paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt consectetuer.</p>
         </div>
-        <form class="section6-form" action="POST">
-          <input type="text" name="name" placeholder="Your Name">
-          <input type="text" name="name" placeholder="Your Email">
-          <input type="text" name="name" placeholder="Your Number">
-          <input type="text" name="name" placeholder="Subject">
+        <form class="section6-form">
+          <input type="text" name="name" placeholder="Your Name" id="name">
+          <input type="text" name="name" placeholder="Your Email " id="email">
+          <input type="text" name="name" placeholder="Your Number" id="number">
+          <input type="text" name="name" placeholder="Subject" id="subject">
           <textarea name="section6-text" id="section6-text" placeholder="Your Message" cols="30" rows="10" ></textarea>
+          <button type="submit" class="section6-btn">Send Message</button>
         </form>
-        <button class="section6-btn">Send Message</button>
+
       </div>
-      <img src="../image/consultform.png" alt="section6-img" width="600" height="500">
+      <img class="section6-img" src="../image/consultform.png" alt="section6-img" width="600" height="500">
     </div>
   </div>
   <!-- footer footer footer footer footer footer footer footer footer footer footer footer -->
